@@ -1,32 +1,57 @@
 import logo from "../assets/Logo.svg";
 
-const MyComponent = () => {
+const Navbar = () => {
   return (
-    <>
-      <div className="navbar flex w-full py-[16px] px-[100px] justify-between items-center">
-        <div className="nav-list flex align-middle gap-8">
-          <p className="text-[15px] font-semibold cursor-pointer">Home</p>
-          <p className="text-[15px] font-semibold cursor-pointer">FAQ</p>
-          <p className="text-[15px] font-semibold cursor-pointer">Stories</p>
-          <p className="text-[15px] font-semibold cursor-pointer">Resources</p>
-        </div>
-        <div className="nav-logo flex items-center ">
-          <img src={logo} alt="Logo" />
-          <p className="text-lg  font-bold">
+    <nav className="w-full py-4 px-6 md:px-12 lg:px-24">
+      <div className="flex justify-between items-center max-w-[1440px] mx-auto">
+        {/* Logo - centered on mobile, left on desktop */}
+        <div className="flex items-center gap-2 order-2 md:order-1">
+          <img src={logo} alt="Logo" className="w-8 h-8" />
+          <p className="text-lg font-bold">
             <span className="text-blue-600">Credit</span>Ease
           </p>
         </div>
-        <div className="btn flex items-center">
-          <div className="signup flex py-[10px] px-[30px] items-center gap-2.5  align-middle ">
-            signUp
-          </div>
-          <div className="signIn flex py-[10px] px-[30px] items-center gap-2.5 border-solid border-2 align-middle border-blue-600 bg-blue-600 rounded">
-            signIn
-          </div>
+
+        {/* Nav Links - hidden on mobile */}
+        <div className="hidden lg:flex items-center gap-8 order-1 md:order-2">
+          <a
+            href="#home"
+            className="text-[15px] font-semibold hover:text-blue-600 transition cursor-pointer"
+          >
+            Home
+          </a>
+          <a
+            href="#faq"
+            className="text-[15px] font-semibold hover:text-blue-600 transition cursor-pointer"
+          >
+            FAQ
+          </a>
+          <a
+            href="#stories"
+            className="text-[15px] font-semibold hover:text-blue-600 transition cursor-pointer"
+          >
+            Stories
+          </a>
+          <a
+            href="#resources"
+            className="text-[15px] font-semibold hover:text-blue-600 transition cursor-pointer"
+          >
+            Resources
+          </a>
+        </div>
+
+        {/* Buttons */}
+        <div className="flex items-center gap-3 order-3">
+          <button className="hidden sm:block py-2 px-6 font-semibold hover:text-blue-600 transition">
+            Sign Up
+          </button>
+          <button className="py-2 px-6 font-semibold bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+            Sign In
+          </button>
         </div>
       </div>
-    </>
+    </nav>
   );
 };
 
-export default MyComponent;
+export default Navbar;

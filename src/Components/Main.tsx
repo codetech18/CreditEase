@@ -5,37 +5,45 @@ import data from "../assets/image10.svg";
 
 const Main = () => {
   return (
-    <>
-      <section className="flex justify-center">
-        <div className="container max-w-[1240px] h-[976px] shrink-0 bg-[#eaeaf1] flex justify-center rounded-2xl">
-          <div className="main-text inline-flex flex-col mt-[20%] w-3xl">
-            <h1 className="text-center font-myfont text-5xl font-semibold leading-[60px] px-32">
+    <section className="flex justify-center px-4 py-8 md:py-12">
+      <div className="container max-w-[1240px] relative">
+        {/* Floating chart - left side */}
+        <div className="hidden lg:block absolute left-0 top-3/5 -translate-y-1/2 -translate-x-1/4 z-20">
+          <img src={chart} alt="" className="w-45 xl:w-52 drop-shadow-xl" />
+        </div>
+
+        {/* Floating data - right side */}
+        <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 z-20">
+          <img src={data} alt="" className="w-40 xl:w-48 drop-shadow-xl" />
+        </div>
+
+        {/* Main content container */}
+        <div className="bg-[#eaeaf1] rounded-2xl relative overflow-hidden">
+          <div className="flex flex-col items-center py-16 md:py-24 px-4 md:px-8">
+            <h1 className="text-center font-myfont text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight md:leading-[60px] max-w-4xl mb-4">
               Simplify Your Airtime Transactions with{" "}
               <span className="text-blue-600">Credit</span>Ease
             </h1>
-            <p className="text-center font-myfont text-lg text-[#9E9E9E] font-medium">
+
+            <p className="text-center font-myfont text-base md:text-lg text-[#9E9E9E] font-medium mb-10">
               Buy, Sell, and Manage Airtime with Ease
             </p>
-            <div className="btn flex justify-center gap-3 mt-10">
-              <button className="flex items-center gap-1 bg-black p-3 rounded">
-                <img src={Googleplay} alt="" />
-                <p className="text-white">Get on Andriod</p>
+
+            <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md">
+              <button className="flex items-center justify-center gap-2 bg-black p-3 rounded hover:bg-gray-800 transition">
+                <img src={Googleplay} alt="Google Play" className="w-5 h-5" />
+                <span className="text-white">Get on Android</span>
               </button>
-              <button className="flex border border-black p-3 rounded">
-                <img src={apple} alt="" />
-                <p className="text-black">Get on Andriod</p>
+
+              <button className="flex items-center justify-center gap-2 bg-[#dedee5] p-3 rounded hover:bg-gray-100 transition">
+                <img src={apple} alt="Apple App Store" className="w-5 h-5" />
+                <span className="text-black">Get on iOS</span>
               </button>
-            </div>
-            <div className="chart absolute top-2/3 left-3">
-              <img src={chart} alt="" />
-            </div>
-            <div className="chart absolute top-3/4 right-3 ">
-              <img src={data} alt="" className="w-lg" />
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
