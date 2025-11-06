@@ -3,7 +3,7 @@ import apple from "../assets/Buttons.svg";
 
 const Management = () => {
   return (
-    <div className="w-full py-16 flex justify-center items-center bg-[#ededf3] py-12 px-4">
+    <div className="w-full py-16 flex justify-center items-center bg-[#ededf3]  px-4">
       <div className="w-full max-w-2xl text-center gap-6 flex flex-col items-center">
         <h1 className="text-4xl font-semibold">
           Unlock a world of seamless credit management

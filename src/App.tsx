@@ -1,4 +1,5 @@
 import Features from "./Components/Features";
+import Footer from "./Components/Footer";
 import Main from "./Components/Main";
 import Management from "./Components/Management";
 import Nav from "./Components/Nav";
@@ -12,6 +13,7 @@ function App() {
       <Features />
       <Review />
       <Management />
+      <Footer />
     </>
   );
 }
