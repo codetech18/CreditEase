@@ -5,7 +5,7 @@ const Management = () => {
   return (
     <div className="w-full py-16 flex justify-center items-center bg-[#ededf3]  px-4">
       <div className="w-full max-w-2xl text-center gap-6 flex flex-col items-center">
-        <h1 className="text-4xl font-semibold">
+        <h1 className="lg:text-4xl text-2xl font-semibold">
           Unlock a world of seamless credit management
         </h1>
         <p className="text-gray-700">
